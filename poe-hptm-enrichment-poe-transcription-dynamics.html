@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>S7 POE HPTM enrichment-POE transcription dynamics | Supplementary Materials</title>
+  <meta name="description" content="S7 POE HPTM enrichment-POE transcription dynamics | Supplementary Materials" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="S7 POE HPTM enrichment-POE transcription dynamics | Supplementary Materials" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="S7 POE HPTM enrichment-POE transcription dynamics | Supplementary Materials" />
+  
+  
+  
+
+<meta name="author" content="Sean T. Bresnahan, Shaun Mahony, Kate Anton, Brock Harpur, Christina M. Grozinger" />
+
+
+<meta name="date" content="2024-05-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hptm-transcription-dynamics.html"/>
+<link rel="next" href="go-enrichment-analyses.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Appendix D</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html"><i class="fa fa-check"></i><b>1</b> WGS, mRNA-seq, and ChIP-seq</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#wgs"><i class="fa fa-check"></i><b>1.1</b> WGS</a></li>
+<li class="chapter" data-level="1.2" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#mrna-seq"><i class="fa fa-check"></i><b>1.2</b> mRNA-seq</a></li>
+<li class="chapter" data-level="1.3" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#chip-seq"><i class="fa fa-check"></i><b>1.3</b> ChIP-seq</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html"><i class="fa fa-check"></i><b>2</b> Transcriptomic Analyses</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html#differential-gene-expression-analysis"><i class="fa fa-check"></i><b>2.1</b> Differential gene expression analysis</a></li>
+<li class="chapter" data-level="2.2" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html#wgcna"><i class="fa fa-check"></i><b>2.2</b> WGCNA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html"><i class="fa fa-check"></i><b>3</b> Allele-Specific Transcriptomic Analyses</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#snps-and-transcripts"><i class="fa fa-check"></i><b>3.1</b> SNPs and transcripts</a></li>
+<li class="chapter" data-level="3.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#poe-gene-lists"><i class="fa fa-check"></i><b>3.2</b> POE gene lists</a></li>
+<li class="chapter" data-level="3.3" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#hpf-wl-ql---allelic-transcriptomics"><i class="fa fa-check"></i><b>3.3</b> 192hpf WL &amp; QL - allelic transcriptomics</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-1"><i class="fa fa-check"></i><b>3.3.1</b> Block 1</a></li>
+<li class="chapter" data-level="3.3.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-2"><i class="fa fa-check"></i><b>3.3.2</b> Block 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#hpf-eggs---allelic-transcriptomics"><i class="fa fa-check"></i><b>3.4</b> 24hpf eggs - allelic transcriptomics</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-3"><i class="fa fa-check"></i><b>3.4.1</b> Block 3</a></li>
+<li class="chapter" data-level="3.4.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-4"><i class="fa fa-check"></i><b>3.4.2</b> Block 4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html"><i class="fa fa-check"></i><b>4</b> ChIP-seq Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#enrichment-across-promoters-and-gene-bodies"><i class="fa fa-check"></i><b>4.1</b> Enrichment across promoters and gene bodies</a></li>
+<li class="chapter" data-level="4.2" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#differential-enrichment-analysis"><i class="fa fa-check"></i><b>4.2</b> Differential enrichment analysis</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k27me3"><i class="fa fa-check"></i><b>4.2.1</b> H3K27me3</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k27ac"><i class="fa fa-check"></i><b>4.2.2</b> H3K27ac</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k4me3"><i class="fa fa-check"></i><b>4.2.3</b> H3K4me3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html"><i class="fa fa-check"></i><b>5</b> Allele-Specific ChIP-seq Analyses</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#snps-and-peaks"><i class="fa fa-check"></i><b>5.1</b> SNPs and peaks</a></li>
+<li class="chapter" data-level="5.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#poe-peak-lists"><i class="fa fa-check"></i><b>5.2</b> POE peak lists</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27me3-1"><i class="fa fa-check"></i><b>5.2.1</b> H3K27me3</a></li>
+<li class="chapter" data-level="5.2.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27ac-1"><i class="fa fa-check"></i><b>5.2.2</b> H3K27ac</a></li>
+<li class="chapter" data-level="5.2.3" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k4me3-1"><i class="fa fa-check"></i><b>5.2.3</b> H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27me3-2"><i class="fa fa-check"></i><b>5.3</b> H3K27me3</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies"><i class="fa fa-check"></i><b>5.3.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.3.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters"><i class="fa fa-check"></i><b>5.3.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27ac-2"><i class="fa fa-check"></i><b>5.4</b> H3K27ac</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies-1"><i class="fa fa-check"></i><b>5.4.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.4.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters-1"><i class="fa fa-check"></i><b>5.4.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k4me3-2"><i class="fa fa-check"></i><b>5.5</b> H3K4me3</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies-2"><i class="fa fa-check"></i><b>5.5.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.5.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters-2"><i class="fa fa-check"></i><b>5.5.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#combined-results"><i class="fa fa-check"></i><b>5.6</b> Combined results</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#block-1-7"><i class="fa fa-check"></i><b>5.6.1</b> Block 1</a></li>
+<li class="chapter" data-level="5.6.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#block-2-7"><i class="fa fa-check"></i><b>5.6.2</b> Block 2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html"><i class="fa fa-check"></i><b>6</b> HPTM-transcription dynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k27me3-3"><i class="fa fa-check"></i><b>6.1</b> H3K27me3</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-3"><i class="fa fa-check"></i><b>6.1.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.1.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-3"><i class="fa fa-check"></i><b>6.1.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k27ac-3"><i class="fa fa-check"></i><b>6.2</b> H3K27ac</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-4"><i class="fa fa-check"></i><b>6.2.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-4"><i class="fa fa-check"></i><b>6.2.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k4me3-3"><i class="fa fa-check"></i><b>6.3</b> H3K4me3</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-5"><i class="fa fa-check"></i><b>6.3.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-5"><i class="fa fa-check"></i><b>6.3.2</b> Promoters</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html"><i class="fa fa-check"></i><b>7</b> POE HPTM enrichment-POE transcription dynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-1-8"><i class="fa fa-check"></i><b>7.1</b> Block 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-4"><i class="fa fa-check"></i>H3K27me3</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-4"><i class="fa fa-check"></i>H3K27ac</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-4"><i class="fa fa-check"></i>H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-2-8"><i class="fa fa-check"></i><b>7.2</b> Block 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-5"><i class="fa fa-check"></i>H3K27me3</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-5"><i class="fa fa-check"></i>H3K27ac</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-5"><i class="fa fa-check"></i>H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#logistic-regression"><i class="fa fa-check"></i><b>7.3</b> Logistic regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-gene-body"><i class="fa fa-check"></i>H3K27me3 (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-promoter"><i class="fa fa-check"></i>H3K27me3 (promoter)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-gene-body"><i class="fa fa-check"></i>H3K27ac (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-promoter"><i class="fa fa-check"></i>H3K27ac (promoter)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-gene-body"><i class="fa fa-check"></i>H3K4me3 (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-promoter"><i class="fa fa-check"></i>H3K4me3 (promoter)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html"><i class="fa fa-check"></i><b>8</b> GO enrichment analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#degs-poe-genes"><i class="fa fa-check"></i><b>8.1</b> DEGs &amp; POE genes</a></li>
+<li class="chapter" data-level="8.2" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#wgcna-modules"><i class="fa fa-check"></i><b>8.2</b> WGCNA modules</a></li>
+<li class="chapter" data-level="8.3" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#hptm-differentially-enriched-regions"><i class="fa fa-check"></i><b>8.3</b> HPTM differentially enriched regions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html"><i class="fa fa-check"></i><b>9</b> POE gene feature assessment</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#spatial-clustering"><i class="fa fa-check"></i><b>9.1</b> Spatial clustering</a></li>
+<li class="chapter" data-level="9.2" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-feature-analyses"><i class="fa fa-check"></i><b>9.2</b> Intron feature analyses</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#recombination-rate"><i class="fa fa-check"></i>Recombination rate</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron"><i class="fa fa-check"></i>% intron</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-gc"><i class="fa fa-check"></i>Intron GC</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-cpg-density"><i class="fa fa-check"></i>Intron CpG density</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Supplementary Materials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="poe-hptm-enrichment-poe-transcription-dynamics" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">S7</span> POE HPTM enrichment-POE transcription dynamics<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#poe-hptm-enrichment-poe-transcription-dynamics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="block-1-8" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Block 1<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-1-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="h3k27me3-4" class="section level3 unnumbered hasAnchor">
+<h3>H3K27me3<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat Lineage B:Lineage A 
+##                   1                   4                   1                  11 
+## Lineage B:Lineage B       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   2                   7                  40                   5 
+##       mat:Lineage A       mat:Lineage B             mat:mat              mat:NA 
+##                   7                   1                   9                  20 
+##             mat:pat        NA:Lineage A        NA:Lineage B              NA:mat 
+##                  11                1215                 322                1541 
+##               NA:NA              NA:pat       pat:Lineage A       pat:Lineage B 
+##                6981                2639                  36                   5 
+##             pat:mat              pat:NA             pat:pat 
+##                  59                 229                 105</code></pre>
+<p>Summary of POE overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 12234    25   259   184</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  236.9345      Inf
+## sample estimates:
+## odds ratio 
+##   347.5206</code></pre>
+<p>ASI: “allelic similarlty index”. Here, the axis values represent allelic transcription (x) and HPTM enrichment (y), with positive values being biased toward the paternal allele, and negative values being biased toward the maternal allele. ASI values are “=” for transcript and peak being baised toward the same allele, “NS” for either transcript or peak not showing allelic bias, and “≠” for biased toward opposite alleles.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+</div>
+<div id="ql" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat Lineage B:Lineage A 
+##                   2                   2                   2                   1 
+##       Lineage B:mat        Lineage B:NA       Lineage B:pat       mat:Lineage A 
+##                   1                  12                  17                   3 
+##       mat:Lineage B             mat:mat              mat:NA             mat:pat 
+##                   1                   2                  50                  31 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                 759                 338                1534                9161 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                5776                  33                  16                  49 
+##              pat:NA             pat:pat 
+##                 324                 231</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 16843    55   366   313</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  199.8675      Inf
+## sample estimates:
+## odds ratio 
+##   260.0518</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-1" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA        Lineage B:NA             mat:mat 
+##                   1                   1                   3                   2 
+##              mat:NA             mat:pat        NA:Lineage A        NA:Lineage B 
+##                   3                   2                 178                  39 
+##              NA:mat               NA:NA              NA:pat       pat:Lineage A 
+##                 217                1008                 371                   5 
+##             pat:mat              pat:NA             pat:pat 
+##                   8                  31                  18</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1775    3    5   30</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  837.0586      Inf
+## sample estimates:
+## odds ratio 
+##   3190.375</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+</div>
+<div id="ql-1" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##  Lineage A:NA Lineage A:pat  Lineage B:NA mat:Lineage B        mat:NA 
+##             2             2             2             1             2 
+##       mat:pat  NA:Lineage A  NA:Lineage B        NA:mat         NA:NA 
+##             2           118            37           187          1164 
+##        NA:pat pat:Lineage A       pat:mat        pat:NA       pat:pat 
+##           899             8            10            38            34</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 2341   11   12   46</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  358.0999      Inf
+## sample estimates:
+## odds ratio 
+##   798.7605</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="h3k27ac-4" class="section level3 unnumbered hasAnchor">
+<h3>H3K27ac<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body-1" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-2" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat Lineage B:Lineage A 
+##                   2                   7                   1                   7 
+## Lineage B:Lineage B       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   1                  16                  41                  11 
+##       mat:Lineage A       mat:Lineage B             mat:mat              mat:NA 
+##                   3                   1                   2                  27 
+##             mat:pat        NA:Lineage A        NA:Lineage B              NA:mat 
+##                  16                1086                 247                1864 
+##               NA:NA              NA:pat       pat:Lineage A       pat:Lineage B 
+##                7627                2986                  32                  10 
+##             pat:mat              pat:NA             pat:pat 
+##                  63                 233                 120</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 13326    32   253   201</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  233.7337      Inf
+## sample estimates:
+## odds ratio 
+##   332.4454</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+</div>
+<div id="ql-2" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##        Lineage A:NA       Lineage A:pat Lineage B:Lineage A Lineage B:Lineage B 
+##                   2                   5                   1                   1 
+##       Lineage B:mat        Lineage B:NA       Lineage B:pat       mat:Lineage A 
+##                   1                  18                  16                   5 
+##       mat:Lineage B             mat:mat              mat:NA             mat:pat 
+##                   1                   1                  39                  19 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                 919                 430                1333                8827 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                5847                  31                  24                  48 
+##              pat:NA             pat:pat 
+##                 320                 250</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 16609    69   366   318</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  164.6826      Inf
+## sample estimates:
+## odds ratio 
+##   208.1453</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter-1" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-3" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA        Lineage B:NA       Lineage B:pat 
+##                   1                   1                   3                   2 
+##             mat:mat              mat:NA             mat:pat        NA:Lineage A 
+##                   2                   3                   1                 180 
+##        NA:Lineage B              NA:mat               NA:NA              NA:pat 
+##                  38                 265                1256                 482 
+##       pat:Lineage A       pat:Lineage B             pat:mat              pat:NA 
+##                   3                   3                   9                  40 
+##             pat:pat 
+##                  20</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 2176    7    7   32</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  488.4372      Inf
+## sample estimates:
+## odds ratio 
+##   1342.753</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+</div>
+<div id="ql-3" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##  Lineage A:NA Lineage A:pat  Lineage B:NA Lineage B:pat mat:Lineage B 
+##             1             3             1             1             1 
+##        mat:NA       mat:pat  NA:Lineage A  NA:Lineage B        NA:mat 
+##             2             1           113            56           192 
+##         NA:NA        NA:pat pat:Lineage A pat:Lineage B       pat:mat 
+##          1219           859             2             2             6 
+##        pat:NA       pat:pat 
+##            42            33</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 2380   11   12   40</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  313.8559      Inf
+## sample estimates:
+## odds ratio 
+##   700.1813</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="h3k4me3-4" class="section level3 unnumbered hasAnchor">
+<h3>H3K4me3<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body-2" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-4" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat Lineage B:Lineage A 
+##                   2                   5                   4                   3 
+## Lineage B:Lineage B       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   1                  13                  32                   9 
+##       mat:Lineage A             mat:mat              mat:NA             mat:pat 
+##                   2                   6                  21                  12 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                 539                 128                1786                7420 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                2843                  14                   6                  48 
+##              pat:NA             pat:pat 
+##                 213                 110</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 12322    14   208   176</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  459.8188      Inf
+## sample estimates:
+## odds ratio 
+##   741.8472</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+</div>
+<div id="ql-4" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat Lineage B:Lineage B 
+##                   1                   3                   4                   1 
+##       Lineage B:mat        Lineage B:NA       Lineage B:pat       mat:Lineage A 
+##                   2                  15                   9                   5 
+##       mat:Lineage B             mat:mat              mat:NA             mat:pat 
+##                   1                   4                  28                  26 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                 609                 272                1237                8025 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                4844                  25                  22                  43 
+##              pat:NA             pat:pat 
+##                 297                 224</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 14332    41   329   297</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  235.3106      Inf
+## sample estimates:
+## odds ratio 
+##   315.9013</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter-2" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-5" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage A:Lineage A        Lineage A:NA       Lineage A:pat        Lineage B:NA 
+##                   1                   1                   1                   1 
+##       Lineage B:pat             mat:mat              mat:NA             mat:pat 
+##                   3                   1                   2                   1 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                  94                  17                 267                1104 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                 465                   3                   1                   8 
+##              pat:NA             pat:pat 
+##                  33                  26</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1907    3    3   36</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  1602.424      Inf
+## sample estimates:
+## odds ratio 
+##   7569.223</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
+</div>
+<div id="ql-5" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##  Lineage A:NA Lineage A:pat Lineage B:pat mat:Lineage B       mat:mat 
+##             3             3             2             1             2 
+##        mat:NA  NA:Lineage A  NA:Lineage B        NA:mat         NA:NA 
+##             2            74            36           167          1075 
+##        NA:pat pat:Lineage A pat:Lineage B       pat:mat        pat:NA 
+##           697             1             3             3            44 
+##       pat:pat 
+##            35</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1998    6    9   40</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  521.7834      Inf
+## sample estimates:
+## odds ratio 
+##   1346.678</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="block-2-8" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Block 2<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-2-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="h3k27me3-5" class="section level3 unnumbered hasAnchor">
+<h3>H3K27me3<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body-3" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-6" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:Lineage A       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   1                   1                  11                   3 
+##       mat:Lineage A       mat:Lineage B             mat:mat              mat:NA 
+##                   4                   3                  19                  54 
+##             mat:pat        NA:Lineage A        NA:Lineage B              NA:mat 
+##                  10                 569                 727                1436 
+##               NA:NA              NA:pat       pat:Lineage A       pat:Lineage B 
+##                5053                1949                   6                  17 
+##             pat:mat              pat:NA             pat:pat 
+##                  37                  83                  29</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 9474   23  145   95</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  175.8221      Inf
+## sample estimates:
+## odds ratio 
+##    269.862</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
+</div>
+<div id="ql-6" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:Lineage A Lineage B:Lineage B       Lineage B:mat        Lineage B:NA 
+##                   1                   2                   3                   7 
+##       Lineage B:pat       mat:Lineage A       mat:Lineage B             mat:mat 
+##                   6                   1                   1                   1 
+##              mat:NA             mat:pat        NA:Lineage A        NA:Lineage B 
+##                  15                   6                 563                 617 
+##              NA:mat               NA:NA              NA:pat       pat:Lineage A 
+##                 941                5414                3362                   3 
+##       pat:Lineage B             pat:mat              pat:NA             pat:pat 
+##                   8                  10                  84                  73</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 10691    26    98    90</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  245.3571      Inf
+## sample estimates:
+## odds ratio 
+##   374.0261</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter-3" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-7" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-7" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##       mat:mat        mat:NA       mat:pat  NA:Lineage A  NA:Lineage B 
+##             1             9             1            72            79 
+##        NA:mat         NA:NA        NA:pat pat:Lineage A pat:Lineage B 
+##           220           763           249             1             1 
+##       pat:mat        pat:NA       pat:pat 
+##             2            11             3</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   11 
+## 1376    3    7</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## [1] &quot;NA&quot;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+</div>
+<div id="ql-7" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-7" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##  Lineage B:NA Lineage B:pat        mat:NA       mat:pat  NA:Lineage A 
+##             1             1             3             3            86 
+##  NA:Lineage B        NA:mat         NA:NA        NA:pat pat:Lineage A 
+##            99           129           865           561             1 
+## pat:Lineage B        pat:NA       pat:pat 
+##             3            20            16</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1720    2    4   19</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  721.7098      Inf
+## sample estimates:
+## odds ratio 
+##   3533.803</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-138-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="h3k27ac-5" class="section level3 unnumbered hasAnchor">
+<h3>H3K27ac<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body-4" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-8" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-8" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:Lineage A       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   1                   2                   6                   3 
+##       mat:Lineage A       mat:Lineage B             mat:mat              mat:NA 
+##                   3                   6                  10                  41 
+##             mat:pat        NA:Lineage A        NA:Lineage B              NA:mat 
+##                   9                 282                 336                 843 
+##               NA:NA              NA:pat       pat:Lineage A       pat:Lineage B 
+##                2933                1191                   2                   9 
+##             pat:mat              pat:NA             pat:pat 
+##                  24                  40                  28</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 5415   16   85   71</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  167.0016      Inf
+## sample estimates:
+## odds ratio 
+##   281.5192</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
+</div>
+<div id="ql-8" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-8" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:Lineage A       Lineage B:mat        Lineage B:NA       Lineage B:pat 
+##                   6                   2                  17                   5 
+##       mat:Lineage A       mat:Lineage B             mat:mat              mat:NA 
+##                   3                   2                   2                  25 
+##             mat:pat        NA:Lineage A        NA:Lineage B              NA:mat 
+##                  17                 605                 613                 950 
+##               NA:NA              NA:pat       pat:Lineage A       pat:Lineage B 
+##                5427                3388                   8                   5 
+##             pat:mat              pat:NA             pat:pat 
+##                   8                  64                  84</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 10757    32    93   111</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  269.4737      Inf
+## sample estimates:
+## odds ratio 
+##   397.5212</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter-4" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-9" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-9" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##      mat:mat       mat:NA      mat:pat NA:Lineage A NA:Lineage B       NA:mat 
+##            2            4            3           59           63          156 
+##        NA:NA       NA:pat      pat:mat       pat:NA      pat:pat 
+##          569          192            3            9            3</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1022    4    3   11</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  189.0323      Inf
+## sample estimates:
+## odds ratio 
+##   830.8785</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
+</div>
+<div id="ql-9" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-9" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:pat        mat:NA       mat:pat  NA:Lineage A  NA:Lineage B 
+##             1             1             5            99            92 
+##        NA:mat         NA:NA        NA:pat pat:Lineage A pat:Lineage B 
+##           157           875           568             2             1 
+##        pat:NA       pat:pat 
+##            16            22</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1762    4    3   27</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  857.3396      Inf
+## sample estimates:
+## odds ratio 
+##   3358.251</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-163-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="h3k4me3-5" class="section level3 unnumbered hasAnchor">
+<h3>H3K4me3<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gene-body-5" class="section level4 unnumbered hasAnchor">
+<h4>Gene body<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#gene-body-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-10" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-10" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:mat  Lineage B:NA Lineage B:pat mat:Lineage A mat:Lineage B 
+##             2             7             3             5             1 
+##       mat:mat        mat:NA       mat:pat  NA:Lineage A  NA:Lineage B 
+##            15            50            21           304           360 
+##        NA:mat         NA:NA        NA:pat pat:Lineage A pat:Lineage B 
+##          1432          4824          2141             3             8 
+##       pat:mat        pat:NA       pat:pat 
+##            37            84            33</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 8806   27  127  106</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  180.7667      Inf
+## sample estimates:
+## odds ratio 
+##   268.7595</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-171-1.png" width="672" /></p>
+</div>
+<div id="ql-10" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-10" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:Lineage A Lineage B:Lineage B       Lineage B:mat        Lineage B:NA 
+##                   1                   3                   4                  18 
+##       Lineage B:pat       mat:Lineage B              mat:NA             mat:pat 
+##                   5                   1                  22                  19 
+##        NA:Lineage A        NA:Lineage B              NA:mat               NA:NA 
+##                 382                 422                1003                5775 
+##              NA:pat       pat:Lineage A       pat:Lineage B             pat:mat 
+##                3836                   3                   4                   5 
+##              pat:NA             pat:pat 
+##                  79                  89</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##    00    01    10    11 
+## 11206    25    81   113</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  405.6765      Inf
+## sample estimates:
+## odds ratio 
+##   609.4468</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-176-1.png" width="672" /></p>
+</div>
+</div>
+<div id="promoter-5" class="section level4 unnumbered hasAnchor">
+<h4>Promoter<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#promoter-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="wl-11" class="section level5 unnumbered hasAnchor">
+<h5>WL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#wl-11" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+## Lineage B:mat       mat:mat        mat:NA       mat:pat  NA:Lineage A 
+##             1             1             5             3            73 
+##  NA:Lineage B        NA:mat         NA:NA        NA:pat pat:Lineage A 
+##            50           247           781           363             1 
+##       pat:mat        pat:NA       pat:pat 
+##             4             6            10</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1490    7    1   18</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  538.9474      Inf
+## sample estimates:
+## odds ratio 
+##    3621.27</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
+</div>
+<div id="ql-11" class="section level5 unnumbered hasAnchor">
+<h5>QL<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#ql-11" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Gene:Peak (categories of allelic bias)</p>
+<pre><code>## 
+##  Lineage B:NA        mat:NA       mat:pat  NA:Lineage A  NA:Lineage B 
+##             2             2             6            66            69 
+##        NA:mat         NA:NA        NA:pat pat:Lineage A       pat:mat 
+##           132           925           645             1             4 
+##        pat:NA       pat:pat 
+##            15            17</code></pre>
+<p>Summary of overlaps (00 = neither peak nor gene biased, 01 = gene unbiased, peak biased, 10 = gene biased, peak unbiased, 11 = both gene and peak show allelic bias)</p>
+<pre><code>## 
+##   00   01   10   11 
+## 1801    9    5   27</code></pre>
+<p>Fishers exact test of enrichment (do genes showing allelic bias overlap with peaks showing allelic bias)?</p>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  data.frame(x = c(tab[4], tab[3]), y = c(tab[2], tab[1]))
+## p-value &lt; 2.2e-16
+## alternative hypothesis: true odds ratio is greater than 1
+## 95 percent confidence interval:
+##  354.8727      Inf
+## sample estimates:
+## odds ratio 
+##   1042.272</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-188-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="logistic-regression" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Logistic regression<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#logistic-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="h3k27me3-gene-body" class="section level3 unnumbered hasAnchor">
+<h3>H3K27me3 (gene body)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-gene-body" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.82864    0.10454 -55.756   &lt;2e-16 ***
+## OVERLAP.x    5.70436    0.10300  55.381   &lt;2e-16 ***
+## Groupb1W    -0.24667    0.10946  -2.253   0.0242 *  
+## Groupb2Q    -0.04658    0.13386  -0.348   0.7279    
+## Groupb2W    -0.26907    0.13136  -2.048   0.0405 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 8323.7  on 50920  degrees of freedom
+## Residual deviance: 3910.9  on 50916  degrees of freedom
+## AIC: 3920.9
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 2.942083e-03 2.385536e-03 3.594559e-03
+## OVERLAP.x   3.001724e+02 2.461635e+02 3.687337e+02
+## Groupb1W    7.813985e-01 6.299726e-01 9.677082e-01
+## Groupb2Q    9.544874e-01 7.327419e-01 1.238843e+00
+## Groupb2W    7.640882e-01 5.893171e-01 9.865526e-01</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+</div>
+<div id="h3k27me3-promoter" class="section level3 unnumbered hasAnchor">
+<h3>H3K27me3 (promoter)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-promoter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.75549    0.31152 -18.476   &lt;2e-16 ***
+## OVERLAP.x    7.52828    0.34261  21.973   &lt;2e-16 ***
+## Groupb1W    -0.26110    0.41729  -0.626    0.532    
+## Groupb2Q    -0.53716    0.45621  -1.177    0.239    
+## Groupb2W    -0.06581    0.52996  -0.124    0.901    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1233.94  on 7353  degrees of freedom
+## Residual deviance:  374.64  on 7349  degrees of freedom
+## AIC: 384.64
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 3.165344e-03   0.00163964 5.583912e-03
+## OVERLAP.x   1.859898e+03 979.24688378 3.769529e+03
+## Groupb1W    7.702022e-01   0.33622761 1.742170e+00
+## Groupb2Q    5.844072e-01   0.23538931 1.418525e+00
+## Groupb2W    9.363044e-01   0.31627339 2.563678e+00</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+</div>
+<div id="h3k27ac-gene-body" class="section level3 unnumbered hasAnchor">
+<h3>H3K27ac (gene body)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-gene-body" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.68839    0.09942 -57.217   &lt;2e-16 ***
+## OVERLAP.x    5.62249    0.09830  57.197   &lt;2e-16 ***
+## Groupb1W    -0.20618    0.10566  -1.951    0.051 .  
+## Groupb2Q     0.08954    0.12566   0.713    0.476    
+## Groupb2W    -0.12049    0.15052  -0.801    0.423    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 8533.4  on 47753  degrees of freedom
+## Residual deviance: 4071.8  on 47749  degrees of freedom
+## AIC: 4081.8
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 3.385034e-03 2.773866e-03 4.096361e-03
+## OVERLAP.x   2.765771e+02 2.287886e+02 3.364209e+02
+## Groupb1W    8.136896e-01 6.610398e-01 1.000369e+00
+## Groupb2Q    1.093668e+00 8.538520e-01 1.397763e+00
+## Groupb2W    8.864828e-01 6.578226e-01 1.187315e+00</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
+</div>
+<div id="h3k27ac-promoter" class="section level3 unnumbered hasAnchor">
+<h3>H3K27ac (promoter)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-promoter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.63126    0.28548 -19.726   &lt;2e-16 ***
+## OVERLAP.x    7.12448    0.29693  23.994   &lt;2e-16 ***
+## Groupb1W    -0.04749    0.36865  -0.129    0.898    
+## Groupb2Q     0.01817    0.39244   0.046    0.963    
+## Groupb2W    -0.01675    0.48733  -0.034    0.973    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1360.28  on 7500  degrees of freedom
+## Residual deviance:  474.87  on 7496  degrees of freedom
+## AIC: 484.87
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 3.584039e-03 1.975511e-03 6.060581e-03
+## OVERLAP.x   1.242006e+03 7.086525e+02 2.275533e+03
+## Groupb1W    9.536245e-01 4.608848e-01 1.968569e+00
+## Groupb2Q    1.018332e+00 4.687536e-01 2.197517e+00
+## Groupb2W    9.833923e-01 3.694404e-01 2.502751e+00</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
+</div>
+<div id="h3k4me3-gene-body" class="section level3 unnumbered hasAnchor">
+<h3>H3K4me3 (gene body)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-gene-body" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -6.089231   0.118185 -51.523   &lt;2e-16 ***
+## OVERLAP.x    6.041222   0.112453  53.722   &lt;2e-16 ***
+## Groupb1W    -0.209966   0.117669  -1.784   0.0744 .  
+## Groupb2Q     0.233025   0.135792   1.716   0.0862 .  
+## Groupb2W    -0.008768   0.134921  -0.065   0.9482    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 8136.4  on 48209  degrees of freedom
+## Residual deviance: 3495.8  on 48205  degrees of freedom
+## AIC: 3505.8
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 2.267151e-03 1.788273e-03 2.842929e-03
+## OVERLAP.x   4.204063e+02 3.387469e+02 5.266395e+02
+## Groupb1W    8.106115e-01 6.431508e-01 1.020280e+00
+## Groupb2Q    1.262412e+00 9.667989e-01 1.646939e+00
+## Groupb2W    9.912702e-01 7.600011e-01 1.290169e+00</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+</div>
+<div id="h3k4me3-promoter" class="section level3 unnumbered hasAnchor">
+<h3>H3K4me3 (promoter)<a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-promoter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = OVERLAP.y ~ OVERLAP.x + Group, family = &quot;binomial&quot;, 
+##     data = comp.df.sub, na.action = na.exclude)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)  -6.0322     0.3567 -16.910   &lt;2e-16 ***
+## OVERLAP.x     7.6968     0.3422  22.495   &lt;2e-16 ***
+## Groupb1W      0.1652     0.4352   0.380    0.704    
+## Groupb2Q      0.5159     0.4434   1.164    0.245    
+## Groupb2W      0.7490     0.4693   1.596    0.110    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1433.79  on 7359  degrees of freedom
+## Residual deviance:  437.22  on 7355  degrees of freedom
+## AIC: 447.22
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<pre><code>##                       OR        2.5 %       97.5 %
+## (Intercept) 2.400151e-03 1.134377e-03 4.603934e-03
+## OVERLAP.x   2.201259e+03 1.163417e+03 4.474247e+03
+## Groupb1W    1.179619e+00 5.026020e-01 2.796025e+00
+## Groupb2Q    1.675221e+00 7.069031e-01 4.063030e+00
+## Groupb2W    2.114952e+00 8.439543e-01 5.373705e+00</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hptm-transcription-dynamics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="go-enrichment-analyses.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/07-POE-overlaps.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/07-POE-overlaps.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

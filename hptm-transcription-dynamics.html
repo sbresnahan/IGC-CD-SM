@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>S6 HPTM-transcription dynamics | Supplementary Materials</title>
+  <meta name="description" content="S6 HPTM-transcription dynamics | Supplementary Materials" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="S6 HPTM-transcription dynamics | Supplementary Materials" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="S6 HPTM-transcription dynamics | Supplementary Materials" />
+  
+  
+  
+
+<meta name="author" content="Sean T. Bresnahan, Shaun Mahony, Kate Anton, Brock Harpur, Christina M. Grozinger" />
+
+
+<meta name="date" content="2024-05-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="allele-specific-chip-seq-analyses.html"/>
+<link rel="next" href="poe-hptm-enrichment-poe-transcription-dynamics.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Appendix D</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html"><i class="fa fa-check"></i><b>1</b> WGS, mRNA-seq, and ChIP-seq</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#wgs"><i class="fa fa-check"></i><b>1.1</b> WGS</a></li>
+<li class="chapter" data-level="1.2" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#mrna-seq"><i class="fa fa-check"></i><b>1.2</b> mRNA-seq</a></li>
+<li class="chapter" data-level="1.3" data-path="wgs-mrna-seq-and-chip-seq.html"><a href="wgs-mrna-seq-and-chip-seq.html#chip-seq"><i class="fa fa-check"></i><b>1.3</b> ChIP-seq</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html"><i class="fa fa-check"></i><b>2</b> Transcriptomic Analyses</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html#differential-gene-expression-analysis"><i class="fa fa-check"></i><b>2.1</b> Differential gene expression analysis</a></li>
+<li class="chapter" data-level="2.2" data-path="transcriptomic-analyses.html"><a href="transcriptomic-analyses.html#wgcna"><i class="fa fa-check"></i><b>2.2</b> WGCNA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html"><i class="fa fa-check"></i><b>3</b> Allele-Specific Transcriptomic Analyses</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#snps-and-transcripts"><i class="fa fa-check"></i><b>3.1</b> SNPs and transcripts</a></li>
+<li class="chapter" data-level="3.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#poe-gene-lists"><i class="fa fa-check"></i><b>3.2</b> POE gene lists</a></li>
+<li class="chapter" data-level="3.3" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#hpf-wl-ql---allelic-transcriptomics"><i class="fa fa-check"></i><b>3.3</b> 192hpf WL &amp; QL - allelic transcriptomics</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-1"><i class="fa fa-check"></i><b>3.3.1</b> Block 1</a></li>
+<li class="chapter" data-level="3.3.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-2"><i class="fa fa-check"></i><b>3.3.2</b> Block 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#hpf-eggs---allelic-transcriptomics"><i class="fa fa-check"></i><b>3.4</b> 24hpf eggs - allelic transcriptomics</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-3"><i class="fa fa-check"></i><b>3.4.1</b> Block 3</a></li>
+<li class="chapter" data-level="3.4.2" data-path="allele-specific-transcriptomic-analyses.html"><a href="allele-specific-transcriptomic-analyses.html#block-4"><i class="fa fa-check"></i><b>3.4.2</b> Block 4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html"><i class="fa fa-check"></i><b>4</b> ChIP-seq Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#enrichment-across-promoters-and-gene-bodies"><i class="fa fa-check"></i><b>4.1</b> Enrichment across promoters and gene bodies</a></li>
+<li class="chapter" data-level="4.2" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#differential-enrichment-analysis"><i class="fa fa-check"></i><b>4.2</b> Differential enrichment analysis</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k27me3"><i class="fa fa-check"></i><b>4.2.1</b> H3K27me3</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k27ac"><i class="fa fa-check"></i><b>4.2.2</b> H3K27ac</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chip-seq-analysis.html"><a href="chip-seq-analysis.html#h3k4me3"><i class="fa fa-check"></i><b>4.2.3</b> H3K4me3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html"><i class="fa fa-check"></i><b>5</b> Allele-Specific ChIP-seq Analyses</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#snps-and-peaks"><i class="fa fa-check"></i><b>5.1</b> SNPs and peaks</a></li>
+<li class="chapter" data-level="5.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#poe-peak-lists"><i class="fa fa-check"></i><b>5.2</b> POE peak lists</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27me3-1"><i class="fa fa-check"></i><b>5.2.1</b> H3K27me3</a></li>
+<li class="chapter" data-level="5.2.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27ac-1"><i class="fa fa-check"></i><b>5.2.2</b> H3K27ac</a></li>
+<li class="chapter" data-level="5.2.3" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k4me3-1"><i class="fa fa-check"></i><b>5.2.3</b> H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27me3-2"><i class="fa fa-check"></i><b>5.3</b> H3K27me3</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies"><i class="fa fa-check"></i><b>5.3.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.3.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters"><i class="fa fa-check"></i><b>5.3.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k27ac-2"><i class="fa fa-check"></i><b>5.4</b> H3K27ac</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies-1"><i class="fa fa-check"></i><b>5.4.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.4.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters-1"><i class="fa fa-check"></i><b>5.4.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#h3k4me3-2"><i class="fa fa-check"></i><b>5.5</b> H3K4me3</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#gene-bodies-2"><i class="fa fa-check"></i><b>5.5.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="5.5.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#promoters-2"><i class="fa fa-check"></i><b>5.5.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#combined-results"><i class="fa fa-check"></i><b>5.6</b> Combined results</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#block-1-7"><i class="fa fa-check"></i><b>5.6.1</b> Block 1</a></li>
+<li class="chapter" data-level="5.6.2" data-path="allele-specific-chip-seq-analyses.html"><a href="allele-specific-chip-seq-analyses.html#block-2-7"><i class="fa fa-check"></i><b>5.6.2</b> Block 2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html"><i class="fa fa-check"></i><b>6</b> HPTM-transcription dynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k27me3-3"><i class="fa fa-check"></i><b>6.1</b> H3K27me3</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-3"><i class="fa fa-check"></i><b>6.1.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.1.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-3"><i class="fa fa-check"></i><b>6.1.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k27ac-3"><i class="fa fa-check"></i><b>6.2</b> H3K27ac</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-4"><i class="fa fa-check"></i><b>6.2.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-4"><i class="fa fa-check"></i><b>6.2.2</b> Promoters</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#h3k4me3-3"><i class="fa fa-check"></i><b>6.3</b> H3K4me3</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#gene-bodies-5"><i class="fa fa-check"></i><b>6.3.1</b> Gene bodies</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hptm-transcription-dynamics.html"><a href="hptm-transcription-dynamics.html#promoters-5"><i class="fa fa-check"></i><b>6.3.2</b> Promoters</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html"><i class="fa fa-check"></i><b>7</b> POE HPTM enrichment-POE transcription dynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-1-8"><i class="fa fa-check"></i><b>7.1</b> Block 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-4"><i class="fa fa-check"></i>H3K27me3</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-4"><i class="fa fa-check"></i>H3K27ac</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-4"><i class="fa fa-check"></i>H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#block-2-8"><i class="fa fa-check"></i><b>7.2</b> Block 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-5"><i class="fa fa-check"></i>H3K27me3</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-5"><i class="fa fa-check"></i>H3K27ac</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-5"><i class="fa fa-check"></i>H3K4me3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#logistic-regression"><i class="fa fa-check"></i><b>7.3</b> Logistic regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-gene-body"><i class="fa fa-check"></i>H3K27me3 (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27me3-promoter"><i class="fa fa-check"></i>H3K27me3 (promoter)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-gene-body"><i class="fa fa-check"></i>H3K27ac (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k27ac-promoter"><i class="fa fa-check"></i>H3K27ac (promoter)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-gene-body"><i class="fa fa-check"></i>H3K4me3 (gene body)</a></li>
+<li class="chapter" data-level="" data-path="poe-hptm-enrichment-poe-transcription-dynamics.html"><a href="poe-hptm-enrichment-poe-transcription-dynamics.html#h3k4me3-promoter"><i class="fa fa-check"></i>H3K4me3 (promoter)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html"><i class="fa fa-check"></i><b>8</b> GO enrichment analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#degs-poe-genes"><i class="fa fa-check"></i><b>8.1</b> DEGs &amp; POE genes</a></li>
+<li class="chapter" data-level="8.2" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#wgcna-modules"><i class="fa fa-check"></i><b>8.2</b> WGCNA modules</a></li>
+<li class="chapter" data-level="8.3" data-path="go-enrichment-analyses.html"><a href="go-enrichment-analyses.html#hptm-differentially-enriched-regions"><i class="fa fa-check"></i><b>8.3</b> HPTM differentially enriched regions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html"><i class="fa fa-check"></i><b>9</b> POE gene feature assessment</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#spatial-clustering"><i class="fa fa-check"></i><b>9.1</b> Spatial clustering</a></li>
+<li class="chapter" data-level="9.2" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-feature-analyses"><i class="fa fa-check"></i><b>9.2</b> Intron feature analyses</a>
+<ul>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#recombination-rate"><i class="fa fa-check"></i>Recombination rate</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron"><i class="fa fa-check"></i>% intron</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-gc"><i class="fa fa-check"></i>Intron GC</a></li>
+<li class="chapter" data-level="" data-path="poe-gene-feature-assessment.html"><a href="poe-gene-feature-assessment.html#intron-cpg-density"><i class="fa fa-check"></i>Intron CpG density</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Supplementary Materials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hptm-transcription-dynamics" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">S6</span> HPTM-transcription dynamics<a href="hptm-transcription-dynamics.html#hptm-transcription-dynamics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="h3k27me3-3" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> H3K27me3<a href="hptm-transcription-dynamics.html#h3k27me3-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gene-bodies-3" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Gene bodies<a href="hptm-transcription-dynamics.html#gene-bodies-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K27me3_GB ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)    0.23129    0.01836  12.601   &lt;2e-16 ***
+## Transcription  1.51770    0.94366   1.608    0.108    
+## Groupb1W      -0.48790    0.02589 -18.843   &lt;2e-16 ***
+## Groupb2Q      -0.46453    0.02586 -17.960   &lt;2e-16 ***
+## Groupb2W      -0.53713    0.02593 -20.717   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 66993  on 48491  degrees of freedom
+## Residual deviance: 66423  on 48487  degrees of freedom
+## AIC: 66433
+## 
+## Number of Fisher Scoring iterations: 3</code></pre>
+<pre><code>##                      OR     2.5 %     97.5 %
+## (Intercept)   1.2602237 1.2157175  1.3064186
+## Transcription 4.5617258 0.8228371 36.8689768
+## Groupb1W      0.6139173 0.5835236  0.6458607
+## Groupb2Q      0.6284289 0.5973503  0.6610918
+## Groupb2W      0.5844257 0.5554530  0.6148742</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="promoters-3" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Promoters<a href="hptm-transcription-dynamics.html#promoters-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K27me3_P ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -0.19268    0.01842  -10.46   &lt;2e-16 ***
+## Transcription -3.51111    1.53339   -2.29    0.022 *  
+## Groupb1W      -0.43184    0.02643  -16.34   &lt;2e-16 ***
+## Groupb2Q      -0.37462    0.02629  -14.25   &lt;2e-16 ***
+## Groupb2W      -0.43267    0.02641  -16.38   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 64247  on 48491  degrees of freedom
+## Residual deviance: 63863  on 48487  degrees of freedom
+## AIC: 63873
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<pre><code>##                       OR       2.5 %    97.5 %
+## (Intercept)   0.82474921 0.795497195 0.8550560
+## Transcription 0.02986382 0.001111175 0.4037698
+## Groupb1W      0.64931138 0.616519170 0.6838102
+## Groupb2Q      0.68755063 0.653002319 0.7238935
+## Groupb2W      0.64877440 0.616031517 0.6832205</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+</div>
+<div id="h3k27ac-3" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> H3K27ac<a href="hptm-transcription-dynamics.html#h3k27ac-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gene-bodies-4" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Gene bodies<a href="hptm-transcription-dynamics.html#gene-bodies-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K27ac_GB ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)    0.26670    0.01852  14.403  &lt; 2e-16 ***
+## Transcription  5.84046    1.65205   3.535 0.000407 ***
+## Groupb1W      -0.22908    0.02585  -8.862  &lt; 2e-16 ***
+## Groupb2Q      -0.42431    0.02586 -16.410  &lt; 2e-16 ***
+## Groupb2W      -0.73402    0.02616 -28.057  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 67163  on 48491  degrees of freedom
+## Residual deviance: 66279  on 48487  degrees of freedom
+## AIC: 66289
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<pre><code>##                        OR      2.5 %       97.5 %
+## (Intercept)     1.3056481  1.2591417 1.353938e+00
+## Transcription 343.9371567 17.1230492 1.030419e+04
+## Groupb1W        0.7952628  0.7559666 8.365813e-01
+## Groupb2Q        0.6542232  0.6218807 6.882166e-01
+## Groupb2W        0.4799744  0.4559652 5.052074e-01</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="promoters-4" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Promoters<a href="hptm-transcription-dynamics.html#promoters-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K27ac_P ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -0.12083    0.01825  -6.620 3.59e-11 ***
+## Transcription  0.63365    0.83094   0.763  0.44571    
+## Groupb1W      -0.08052    0.02579  -3.123  0.00179 ** 
+## Groupb2Q      -0.32665    0.02604 -12.546  &lt; 2e-16 ***
+## Groupb2W      -0.58884    0.02654 -22.187  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 65645  on 48491  degrees of freedom
+## Residual deviance: 65037  on 48487  degrees of freedom
+## AIC: 65047
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<pre><code>##                      OR     2.5 %     97.5 %
+## (Intercept)   0.8861842 0.8550308  0.9184490
+## Transcription 1.8844851 0.3607992 10.4949961
+## Groupb1W      0.9226399 0.8771650  0.9704639
+## Groupb2Q      0.7213345 0.6854346  0.7590862
+## Groupb2W      0.5549713 0.5268214  0.5845819</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+</div>
+<div id="h3k4me3-3" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> H3K4me3<a href="hptm-transcription-dynamics.html#h3k4me3-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gene-bodies-5" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Gene bodies<a href="hptm-transcription-dynamics.html#gene-bodies-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K4me3_GB ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)    0.34155    0.01865  18.311  &lt; 2e-16 ***
+## Transcription  6.90333    1.80531   3.824 0.000131 ***
+## Groupb1W      -0.06428    0.02606  -2.467 0.013629 *  
+## Groupb2Q      -0.31405    0.02590 -12.125  &lt; 2e-16 ***
+## Groupb2W      -0.27871    0.02591 -10.758  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 66811  on 48491  degrees of freedom
+## Residual deviance: 66571  on 48487  degrees of freedom
+## AIC: 66581
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<pre><code>##                        OR      2.5 %       97.5 %
+## (Intercept)     1.4071244  1.3566526 1.459570e+00
+## Transcription 995.5844895 35.2006129 3.996824e+04
+## Groupb1W        0.9377424  0.8910494 9.868753e-01
+## Groupb2Q        0.7304846  0.6943134 7.685136e-01
+## Groupb2W        0.7567564  0.7192760 7.961652e-01</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+</div>
+<div id="promoters-5" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Promoters<a href="hptm-transcription-dynamics.html#promoters-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## 
+## Call:
+## glm(formula = H3K4me3_P ~ Transcription + Group, family = &quot;binomial&quot;, 
+##     data = corrdat, na.action = na.exclude)
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -0.03695    0.01822  -2.028  0.04259 *  
+## Transcription  0.47954    0.83142   0.577  0.56410    
+## Groupb1W       0.07629    0.02570   2.968  0.00299 ** 
+## Groupb2Q      -0.11694    0.02573  -4.545  5.5e-06 ***
+## Groupb2W      -0.02362    0.02570  -0.919  0.35799    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 67191  on 48491  degrees of freedom
+## Residual deviance: 67133  on 48487  degrees of freedom
+## AIC: 67143
+## 
+## Number of Fisher Scoring iterations: 3</code></pre>
+<pre><code>##                      OR     2.5 %    97.5 %
+## (Intercept)   0.9637236 0.9299061 0.9987623
+## Transcription 1.6153293 0.3176644 9.2686175
+## Groupb1W      1.0792787 1.0262594 1.1350464
+## Groupb2Q      0.8896384 0.8458808 0.9356480
+## Groupb2W      0.9766554 0.9286808 1.0271056</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="allele-specific-chip-seq-analyses.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="poe-hptm-enrichment-poe-transcription-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/06-chip-mRNA-dynamics.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/06-chip-mRNA-dynamics.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
