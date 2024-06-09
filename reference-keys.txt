@@ -71,3 +71,4 @@ hptm-differentially-enriched-regions
 poe-gene-feature-assessment
 spatial-clustering
 intron-feature-analyses
+comparison-to-random-peaks
